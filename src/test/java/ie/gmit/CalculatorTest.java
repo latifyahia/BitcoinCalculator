@@ -9,8 +9,7 @@ public class CalculatorTest {
     //this method will add two numbers
 
     @Test
-    @Disabled
-    void AddTest()
+    void addTest()
     {
         Calculator CalTest = new Calculator();
         int sum = CalTest.Add(84,46);
@@ -18,8 +17,7 @@ public class CalculatorTest {
     }
 
     @Test
-    @Disabled
-    void SubtractTest()
+    void subtractTest()
     {
         Calculator CalTest = new Calculator();
         int sum = CalTest.Subtract(50,30);
@@ -27,8 +25,7 @@ public class CalculatorTest {
     }
 
     @Test
-    @Disabled
-    void DivideTest()
+    void divideTest()
     {
         Calculator CalTest = new Calculator();
         int sum = CalTest.Divide(25,5);
@@ -36,7 +33,7 @@ public class CalculatorTest {
     }
 
     @Test
-    void MultiplyTest()
+    void multiplyTest()
     {
         Calculator CalTest = new Calculator();
         int sum = CalTest.Multiply(6,5);
