@@ -27,10 +27,19 @@ public class CalculatorTest {
     }
 
     @Test
+    @Disabled
     void DivideTest()
     {
         Calculator CalTest = new Calculator();
         int sum = CalTest.Divide(25,5);
         assertEquals(5, sum, 0);
+    }
+
+    @Test
+    void MultiplyTest()
+    {
+        Calculator CalTest = new Calculator();
+        int sum = CalTest.Multiply(6,5);
+        assertEquals(30, sum, 0);
     }
 }
