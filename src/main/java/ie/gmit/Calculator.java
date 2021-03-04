@@ -14,8 +14,16 @@ public class Calculator {
 
     public int Divide(int num1, int num2)
     {
-        int sum = num1 / num2;
-        return sum;
+        if(num1 > 0 && num2 >0)
+        {
+            int sum = num1 / num2;
+            return sum;
+        }
+
+        else{
+            throw new IllegalArgumentException("Cant Divide by zero");
+        }
+
     }
 
     public int Multiply(int num1, int num2)
@@ -23,4 +31,6 @@ public class Calculator {
         int sum = num1 * num2;
         return sum;
     }
+
+
 }

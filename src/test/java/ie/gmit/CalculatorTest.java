@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CalculatorTest {
     //this method will add two numbers
@@ -15,6 +16,7 @@ public class CalculatorTest {
         int sum = CalTest.Add(84,46);
         assertEquals(130, sum, 0);
     }
+
 
     @Test
     void subtractTest()
@@ -38,5 +40,13 @@ public class CalculatorTest {
         Calculator CalTest = new Calculator();
         int sum = CalTest.Multiply(6,5);
         assertEquals(30, sum, 0);
+    }
+
+    @Test
+    public void testDivideByZero() {
+        Calculator CalTest = new Calculator();
+       assertThrows(IllegalArgumentException.class, () -> CalTest.Divide(0,1));
+        Calculator CalTest2 = new Calculator();
+        assertThrows(IllegalArgumentException.class, () -> CalTest2.Divide(1,0));
     }
 }
